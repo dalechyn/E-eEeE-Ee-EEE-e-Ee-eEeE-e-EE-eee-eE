@@ -46,7 +46,6 @@ const decode = (dolphin: string): string => {
 export const app = new Frog({
   title: encode('Dolphin Says'),
   assetsPath: '/',
-  origin: 'https://dcee-91-227-182-2.ngrok-free.app',
   basePath: '/api',
 }).use(neynar({apiKey: 'NEYNAR_FROG_FM', features: ['cast']}))
 
