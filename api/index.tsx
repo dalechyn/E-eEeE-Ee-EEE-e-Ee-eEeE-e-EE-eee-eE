@@ -27,6 +27,7 @@ const encode = (text: string): string => {
     if (value === '.') return 'E'
     if (value === '-') return 'e'
     if (value === ' ') return ''
+    return value
     }).join('')
   }).join(' ');
 };
@@ -37,11 +38,13 @@ const decode = (dolphin: string): string => {
       if (dolphinChar === 'E') return '.'
       if (dolphinChar === 'e') return '-'
       if (dolphinChar === ' ') return '/'
-      return ''
+      return dolphinChar
     }).join('')
     return morseToCharMap[morseChar] || '';
   }).join('');
 };
+
+console.log(encode('HELL NAH'))
 
 export const app = new Frog({
   title: encode('Dolphin Says'),
